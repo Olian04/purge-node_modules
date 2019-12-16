@@ -1,0 +1,41 @@
+{
+  "name": "purge-node_modules",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/cli/index.js",
+    "prestart": "npm run build",
+    "build": "tsc",
+    "prebuild": "npm run test",
+    "test": "mocha --recursive -r ts-node/register 'tests/**/*.test.ts' "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olian04/purge-node_modules.git"
+  },
+  "author": "Olian04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olian04/purge-node_modules/issues"
+  },
+  "homepage": "https://github.com/Olian04/purge-node_modules#readme",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "chalk": "^3.0.0",
+    "memfs": "^3.0.1",
+    "prompts": "^2.3.0",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.17",
+    "@types/prompts": "^2.0.3",
+    "@types/rimraf": "^2.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
